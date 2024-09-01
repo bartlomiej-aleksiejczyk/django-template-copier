@@ -1,6 +1,6 @@
 # questions
 project_name:
-  type: string
+  type: str
   help: What is the new project name?
 is_huey_enabled:
   type: bool
