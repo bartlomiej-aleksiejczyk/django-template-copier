@@ -1,4 +1,7 @@
 # questions
+project_name:
+  type: string
+  help: What is the new project name?
 is_huey_enabled:
   type: bool
   help: Do you want to use the Huey to manage asynchrnous tasks?

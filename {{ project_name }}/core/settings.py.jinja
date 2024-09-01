@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     "users",
     "axes",
     "django.contrib.postgres",
-    'huey.contrib.djhuey', 
+    'huey.contrib.djhuey',
+{% if is_huey_enabled %}
+    'huey.contrib.djhuey',
+{% endif %}
 ]
 
 MIDDLEWARE = [
@@ -199,6 +202,8 @@ LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 AXES_COOLOFF_TIME = 0.1
 
+
+{% if is_huey_enabled %}
 HUEY = {
     'huey_class': 'huey.SqliteHuey',
     'name': 'huey_single_queue',
@@ -208,3 +213,4 @@ HUEY = {
         'worker_type': 'thread',
     },
 }
+{% endif %}

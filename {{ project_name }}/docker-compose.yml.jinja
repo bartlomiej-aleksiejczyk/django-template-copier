@@ -39,7 +39,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     restart: always
-
+{% if is_huey_enabled %}
   huey_consumer:
     build:
       context: .
@@ -49,7 +49,7 @@ services:
       - .:/app
     depends_on:
       - django
-
+{% endif %}
 
 volumes:
   postgres_data:
