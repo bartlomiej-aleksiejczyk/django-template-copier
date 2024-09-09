@@ -12,13 +12,21 @@ services:
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY}
       DEBUG: "False"
       ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+{% if choosen_databse == 'postgres' %}
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_HOST: ${POSTGRES_HOST}
       POSTGRES_PORT: ${POSTGRES_PORT}
+{% endif %}
     volumes:
       - .:/app
+{% if choosen_databse == 'sqlite' %}
+      - sqlite_data:/app/db
+{% endif %}
+{% if is_huey_enabled %}
+      - huey_data:/app/huey_db
+{% endif %}
 
 {% if is_huey_enabled %}
   huey_consumer:
@@ -31,4 +39,10 @@ services:
     depends_on:
       - django
 {% endif %}
-
+volumes:
+{% if choosen_databse == 'sqlite' %}
+  sqlite_data:
+{% endif %}
+{% if is_huey_enabled %}
+  huey_data:
+{% endif %}

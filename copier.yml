@@ -2,6 +2,13 @@
 project_name:
   type: str
   help: What is the new project name?
+choosen_databse:
+  type: str
+  help: Which database do you want to use?
+  choices:
+    Terraform: postgres
+    SQLite: sqlite
+  default: sqlite
 is_huey_enabled:
   type: bool
   help: Do you want to use the Huey to manage asynchrnous tasks?

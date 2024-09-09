@@ -20,16 +20,27 @@ services:
       DJANGO_SECRET_KEY: "your-secret-key-here"
       DEBUG: "True"
       ALLOWED_HOSTS: "localhost,192.168.0.29,0.0.0.0,127.0.0.1,[::1]"
+{% if choosen_databse == 'postgres' %}
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_HOST: db
       POSTGRES_PORT: "5432"
+{% endif %}
     volumes:
       - .:/app
+{% if choosen_databse == 'sqlite' %}
+      - sqlite_data:/app/db
+{% endif %}
+{% if is_huey_enabled %}
+      - huey_data:/app/huey_db
+{% endif %}
+{% if choosen_databse == 'postgres' %}
     depends_on:
       - db
+{% endif %}
 
+{% if choosen_databse == 'postgres' %}
   db:
     image: postgres
     volumes:
@@ -39,6 +50,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     restart: always
+{% endif %}
+
 {% if is_huey_enabled %}
   huey_consumer:
     build:
@@ -52,4 +65,12 @@ services:
 {% endif %}
 
 volumes:
+{% if choosen_databse == 'postgres' %}
   postgres_data:
+{% endif %}
+{% if choosen_databse == 'sqlite' %}
+  sqlite_data:
+{% endif %}
+{% if is_huey_enabled %}
+  huey_data:
+{% endif %}
