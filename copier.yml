@@ -6,7 +6,7 @@ choosen_databse:
   type: str
   help: Which database do you want to use?
   choices:
-    Terraform: postgres
+    PostgreSQL: postgres
     SQLite: sqlite
   default: sqlite
 is_huey_enabled:

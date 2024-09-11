@@ -8,6 +8,6 @@ copier copy filesystem/path/to/project/django-template path/to/destination
 
 copier copy url path/to/destination
 
-### Using simplified gh repo
+### Using simplified gh repo url
 
 copier copy gh:bartlomiej-aleksiejczyk/django-template-copier path/to/destination
