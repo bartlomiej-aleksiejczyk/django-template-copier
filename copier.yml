@@ -1,7 +1,7 @@
 # questions
 project_name:
   type: str
-  help: What is the new project name?
+  help: What is the new project name ( it will impact dir name, kebab case is suggested)?
 choosen_databse:
   type: str
   help: Which database do you want to use?
