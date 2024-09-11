@@ -13,3 +13,5 @@ is_huey_enabled:
   type: bool
   help: Do you want to use the Huey to manage asynchrnous tasks?
   default: no
+_exclude:
+  - "README.md"
