@@ -22,5 +22,5 @@ used_classless_css:
   default: sqlite
 _exclude:
   - "README.md"
-  - ".vscode"
-  - "./.git"
+  - "./.vscode"
+  - ".git"
