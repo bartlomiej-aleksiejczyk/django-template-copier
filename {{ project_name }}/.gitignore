@@ -138,15 +138,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# VS Code settings
-.vscode/
-
 # JetBrains IDEs (IntelliJ, PyCharm, etc)
 .idea/
 *.iml
-
-# Microsoft Visual Studio Code
-.vs/
 
 # Operating system files
 .DS_Store
