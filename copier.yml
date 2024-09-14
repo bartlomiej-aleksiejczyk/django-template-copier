@@ -1,7 +1,7 @@
 # questions
 project_name:
   type: str
-  help: What is the new project name ( it will impact dir name, kebab case is suggested)?
+  help: What is the new project name (it will impact dir name, kebab case is suggested)?
 choosen_databse:
   type: str
   help: Which database do you want to use?
@@ -13,6 +13,14 @@ is_huey_enabled:
   type: bool
   help: Do you want to use the Huey to manage asynchrnous tasks?
   default: no
+used_classless_css:
+  type: str
+  help: Which database do you want to use?
+  choices:
+    PostgreSQL: postgres
+    SQLite: sqlite
+  default: sqlite
 _exclude:
   - "README.md"
   - ".vscode"
+  - ".git"
