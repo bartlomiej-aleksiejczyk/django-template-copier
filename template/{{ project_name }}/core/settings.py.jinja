@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     "users",
     "axes",
     "django.contrib.postgres",
-    "huey.contrib.djhuey",
 {% if is_huey_enabled %}
     "huey.contrib.djhuey",
 {% endif %}
@@ -212,7 +211,6 @@ HUEY = {
     'huey_class': 'huey.SqliteHuey',
     'name': 'huey_single_queue',
     'immediate': False,
-    'filename': os.path.join(BASE_DIR, 'huey_db', 'huey.db'),
     'consumer': {
         'workers': 1,
         'worker_type': 'thread',
