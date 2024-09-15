@@ -13,14 +13,10 @@ is_huey_enabled:
   type: bool
   help: Do you want to use the Huey to manage asynchrnous tasks?
   default: no
-used_classless_css:
-  type: str
-  help: Which database do you want to use?
-  choices:
-    PostgreSQL: postgres
-    SQLite: sqlite
-  default: sqlite
+
 _exclude:
   - "README.md"
-  - "./.vscode"
+  - ".vscode"
+  - "!/{{ project_name }}/.vscode"
+  - "copier.yml"
   - ".git"
