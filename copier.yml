@@ -14,5 +14,4 @@ is_huey_enabled:
   help: Do you want to use the Huey to manage asynchrnous tasks?
   default: no
 
-_subdirectory:
-  - "template"
+_subdirectory: template
