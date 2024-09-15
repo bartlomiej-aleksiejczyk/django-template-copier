@@ -16,6 +16,20 @@ This template includes:
 - Precoinfigured templates and static files
 - Huey configured as message queue
 
+## How to run
+
+**Local development version:**
+
+```
+docker-compose -f custom-compose-dev.yml up -d
+```
+
+**Production version:**
+
+```
+docker-compose -f docker-compose-prod.yml up -d
+```
+
 ## Command Passthrough
 
 ```
