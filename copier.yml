@@ -14,9 +14,5 @@ is_huey_enabled:
   help: Do you want to use the Huey to manage asynchrnous tasks?
   default: no
 
-_exclude:
-  - "README.md"
-  - ".vscode"
-  - "!/{{ project_name }}/.vscode"
-  - "copier.yml"
-  - ".git"
+_subdirectory:
+  - "template"
