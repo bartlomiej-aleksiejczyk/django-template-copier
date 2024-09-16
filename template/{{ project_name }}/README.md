@@ -21,13 +21,13 @@ This template includes:
 **Local development version:**
 
 ```
-docker-compose -f docker-compose-dev.yml up -d
+docker-compose -f docker-compose-dev.yml up
 ```
 
 **Production version:**
 
 ```
-docker compose -f docker-compose-prod.yml up -d
+docker compose -f docker-compose-prod.yml up
 ```
 
 ## Command Passthrough
