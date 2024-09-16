@@ -101,7 +101,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db', 'sqlite.db'),
+        "NAME": "/db/sqlite.db",
     }
 }
 {% endif %}
@@ -211,6 +211,7 @@ HUEY = {
     'huey_class': 'huey.SqliteHuey',
     'name': 'huey_single_queue',
     'immediate': False,
+    "filename": "/huey_db/huey.db",
     'consumer': {
         'workers': 1,
         'worker_type': 'thread',

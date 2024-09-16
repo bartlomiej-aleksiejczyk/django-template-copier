@@ -30,10 +30,10 @@ services:
     volumes:
       - .:/app
 {% if choosen_databse == 'sqlite' %}
-      - sqlite_data:/app/db
+      - sqlite_data:/db
 {% endif %}
 {% if is_huey_enabled %}
-      - huey_data:/app/huey_db
+      - huey_data:/huey_db
 {% endif %}
 {% if choosen_databse == 'postgres' %}
     depends_on:
@@ -60,6 +60,8 @@ services:
     command: python manage.py run_huey
     volumes:
       - .:/app
+      - sqlite_data:/db
+      - huey_data:/huey_db
     depends_on:
       - django
 {% endif %}
