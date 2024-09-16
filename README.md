@@ -11,3 +11,8 @@ copier copy url path/to/destination
 ### Using simplified gh repo url
 
 copier copy gh:bartlomiej-aleksiejczyk/django-template-copier path/to/destination
+
+### Future improvments
+
+- Add celery with redis/rabbitMQ
+- Add option to include db/rabbitmq/redis as a container in the production docker compose
