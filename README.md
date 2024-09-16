@@ -12,7 +12,7 @@ copier copy url path/to/destination
 
 copier copy gh:bartlomiej-aleksiejczyk/django-template-copier path/to/destination
 
-### Future improvments
+### Future improvment ideas
 
 - Add celery with redis/rabbitMQ
 - Add option to include db/rabbitmq/redis as a container in the production docker compose
