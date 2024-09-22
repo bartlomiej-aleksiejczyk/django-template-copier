@@ -16,3 +16,6 @@ copier copy gh:bartlomiej-aleksiejczyk/django-template-copier path/to/destinatio
 
 - Add celery with redis/rabbitMQ
 - Add option to include db/rabbitmq/redis as a container in the production docker compose
+
+## Template URL
+https://github.com/bartlomiej-aleksiejczyk/copier-general-template
