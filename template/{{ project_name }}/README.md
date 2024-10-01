@@ -40,7 +40,7 @@ examples:
 
 ```
 docker compose -f docker-compose-dev.yml exec django pip freeze > requirements.txt
-docker compose -f docker-compose-dev.yml exec django pip install yt-dlp==2024.8.6
+docker compose -f docker-compose-dev.yml exec django pip install requests==2.32.3
 ```
 ## Template URL
 https://github.com/bartlomiej-aleksiejczyk/django-template-copier

@@ -2,7 +2,7 @@ services:
   django:
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile.dev
     command: >
       sh -c "python wait_for_db.py &&
             python manage.py makemigrations --noinput &&
